@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Doubt Session Slots</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .slot-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .slot-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .slot-card:hover {
+            transform: scale(1.05);
+        }
+        .slot-card h3 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        .slot-card p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .slot-card button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .slot-card button:hover {
+            background-color: #0056b3;
+        }
+        .booked {
+            background-color: #28a745;
+        }
+        .booked:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Available Doubt Session Slots</h1>
+
+    <div class="slot-container">
+        <!-- Slot 1 -->
+        <div class="slot-card">
+            <h3>Course: Math 101</h3>
+            <p>Instructor: John Doe</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 9:00 AM - 10:00 AM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+        <!-- Slot 2 -->
+        <div class="slot-card">
+            <h3>Course: Java Programming</h3>
+            <p>Instructor: Jane Smith</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 10:00 AM - 11:00 AM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+        <!-- Slot 3 -->
+        <div class="slot-card">
+            <h3>Course: Web Development</h3>
+            <p>Instructor: Mike Brown</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 11:00 AM - 12:00 PM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+        <!-- Slot 4 -->
+        <div class="slot-card">
+            <h3>Course: Data Structures</h3>
+            <p>Instructor: Emily White</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 12:00 PM - 1:00 PM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+        <!-- Slot 5 -->
+        <div class="slot-card">
+            <h3>Course: Python Basics</h3>
+            <p>Instructor: Chris Johnson</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 1:00 PM - 2:00 PM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+        <!-- Slot 6 -->
+        <div class="slot-card">
+            <h3>Course: JavaScript Essentials</h3>
+            <p>Instructor: Sarah Lee</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 2:00 PM - 3:00 PM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+        <!-- Slot 7 -->
+        <div class="slot-card">
+            <h3>Course: Algorithms</h3>
+            <p>Instructor: Kevin Scott</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 3:00 PM - 4:00 PM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+        <!-- Slot 8 -->
+        <div class="slot-card">
+            <h3>Course: Machine Learning</h3>
+            <p>Instructor: Rachel Adams</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 4:00 PM - 5:00 PM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+        <!-- Slot 9 -->
+        <div class="slot-card">
+            <h3>Course: Database Management</h3>
+            <p>Instructor: David Miller</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 5:00 PM - 6:00 PM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+        <!-- Slot 10 -->
+        <div class="slot-card">
+            <h3>Course: Cloud Computing</h3>
+            <p>Instructor: Linda Green</p>
+            <p>Date: May 6, 2025</p>
+            <p>Time: 6:00 PM - 7:00 PM</p>
+            <button class="book-btn">Book Slot</button>
+            <button class="cancel-btn" style="display: none;">Cancel Slot</button>
+        </div>
+
+    </div>
+
+    <script>
+        const bookButtons = document.querySelectorAll('.book-btn');
+        const cancelButtons = document.querySelectorAll('.cancel-btn');
+
+        // Book slot function
+        bookButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                button.style.display = 'none';
+                cancelButtons[index].style.display = 'inline-block';
+                cancelButtons[index].classList.add('booked');
+            });
+        });
+
+        // Cancel slot function
+        cancelButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                button.style.display = 'none';
+                bookButtons[index].style.display = 'inline-block';
+                bookButtons[index].classList.remove('booked');
+            });
+        });
+    </script>
+
+</body>
+</html>

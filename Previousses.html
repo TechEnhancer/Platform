@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .section {
+            margin-top: 30px;
+        }
+        .section h2 {
+            color: #333;
+            text-align: center;
+        }
+        .slot-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .slot-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .slot-card h3 {
+            margin-top: 0;
+            color: #007BFF;
+        }
+        .slot-card p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .slot-card button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .slot-card button:hover {
+            background-color: #0056b3;
+        }
+        .attended {
+            background-color: #28a745;
+        }
+        .attended:hover {
+            background-color: #218838;
+        }
+        .missed {
+            background-color: #dc3545;
+        }
+        .missed:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Session History</h1>
+
+    <!-- Attended Sessions Section -->
+    <div class="section">
+        <h2>Attended Sessions</h2>
+        <div class="slot-container">
+            <!-- Slot 1 -->
+            <div class="slot-card">
+                <h3>Course: Math 101</h3>
+                <p>Instructor: John Doe</p>
+                <p>Time: May 6, 2025 - 9:00 AM to 10:00 AM</p>
+                <button class="attended-btn">Mark as Attended</button>
+            </div>
+
+            <!-- Slot 2 -->
+            <div class="slot-card">
+                <h3>Course: Java Programming</h3>
+                <p>Instructor: Jane Smith</p>
+                <p>Time: May 6, 2025 - 10:00 AM to 11:00 AM</p>
+                <button class="attended-btn">Mark as Attended</button>
+            </div>
+
+            <!-- Slot 3 -->
+            <div class="slot-card">
+                <h3>Course: Web Development</h3>
+                <p>Instructor: Mike Brown</p>
+                <p>Time: May 6, 2025 - 11:00 AM to 12:00 PM</p>
+                <button class="attended-btn">Mark as Attended</button>
+            </div>
+
+            <!-- Slot 4 -->
+            <div class="slot-card">
+                <h3>Course: Data Structures</h3>
+                <p>Instructor: Emily White</p>
+                <p>Time: May 6, 2025 - 12:00 PM to 1:00 PM</p>
+                <button class="attended-btn">Mark as Attended</button>
+            </div>
+
+            <!-- Slot 5 -->
+            <div class="slot-card">
+                <h3>Course: Python Basics</h3>
+                <p>Instructor: Chris Johnson</p>
+                <p>Time: May 6, 2025 - 1:00 PM to 2:00 PM</p>
+                <button class="attended-btn">Mark as Attended</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Missed Sessions Section -->
+    <div class="section">
+        <h2>Missed Sessions</h2>
+        <div class="slot-container">
+            <!-- Slot 1 -->
+            <div class="slot-card">
+                <h3>Course: JavaScript Essentials</h3>
+                <p>Instructor: Sarah Lee</p>
+                <p>Time: May 6, 2025 - 2:00 PM to 3:00 PM</p>
+                <button class="missed-btn">Mark as Missed</button>
+            </div>
+
+            <!-- Slot 2 -->
+            <div class="slot-card">
+                <h3>Course: Algorithms</h3>
+                <p>Instructor: Kevin Scott</p>
+                <p>Time: May 6, 2025 - 3:00 PM to 4:00 PM</p>
+                <button class="missed-btn">Mark as Missed</button>
+            </div>
+
+            <!-- Slot 3 -->
+            <div class="slot-card">
+                <h3>Course: Machine Learning</h3>
+                <p>Instructor: Rachel Adams</p>
+                <p>Time: May 6, 2025 - 4:00 PM to 5:00 PM</p>
+                <button class="missed-btn">Mark as Missed</button>
+            </div>
+
+            <!-- Slot 4 -->
+            <div class="slot-card">
+                <h3>Course: Database Management</h3>
+                <p>Instructor: David Miller</p>
+                <p>Time: May 6, 2025 - 5:00 PM to 6:00 PM</p>
+                <button class="missed-btn">Mark as Missed</button>
+            </div>
+
+            <!-- Slot 5 -->
+            <div class="slot-card">
+                <h3>Course: Cloud Computing</h3>
+                <p>Instructor: Linda Green</p>
+                <p>Time: May 6, 2025 - 6:00 PM to 7:00 PM</p>
+                <button class="missed-btn">Mark as Missed</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const attendedButtons = document.querySelectorAll('.attended-btn');
+        const missedButtons = document.querySelectorAll('.missed-btn');
+
+        // Mark session as attended
+        attendedButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                button.style.display = 'none';
+                button.parentElement.querySelector('p').textContent = 'Status: Attended';
+                button.parentElement.querySelector('button').classList.add('attended');
+                button.parentElement.querySelector('button').disabled = true;
+            });
+        });
+
+        // Mark session as missed
+        missedButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                button.style.display = 'none';
+                button.parentElement.querySelector('p').textContent = 'Status: Missed';
+                button.parentElement.querySelector('button').classList.add('missed');
+                button.parentElement.querySelector('button').disabled = true;
+            });
+        });
+    </script>
+
+</body>
+</html>

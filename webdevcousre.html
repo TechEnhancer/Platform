@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+        .video-section {
+            flex: 3;
+            margin-right: 20px;
+        }
+        .video-section iframe {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+        }
+        .video-details {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .video-details p {
+            margin: 5px 0;
+            color: #333;
+        }
+        .sidebar {
+            flex: 1;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            height: 600px;
+            overflow-y: auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .thumbnail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        .thumbnail img {
+            width: 80px;
+            height: 50px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+        .thumbnail span {
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="video-section">
+            <!-- YouTube video embed -->
+            <iframe src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0" allowfullscreen></iframe>
+
+            <!-- Video details -->
+            <div class="video-details">
+                <p><strong>Course Name:</strong> Web Development Basics</p>
+                <p><strong>Instructor:</strong> Sachin Kapoor</p>
+                <p><strong>Video Duration:</strong> 12 minutes</p>
+                <p><strong>Course Price:</strong> 559/-</p>
+            </div>
+        </div>
+
+        <!-- Scrollable sidebar -->
+        <div class="sidebar">
+            <h3>Course Videos</h3>
+
+            <!-- 10 Thumbnails -->
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/UB1O30fR-EE/0.jpg" alt="Frontend Basics">
+                <span>Frontend Basics</span>
+            </div>
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/Ke90Tje7VS0/0.jpg" alt="React Introduction">
+                <span>React Introduction</span>
+            </div>
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/1Rs2ND1ryYc/0.jpg" alt="CSS Flexbox">
+                <span>CSS Flexbox</span>
+            </div>
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/kUMe1FH4CHE/0.jpg" alt="HTML Crash Course">
+                <span>HTML Crash Course</span>
+            </div>
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/PkZNo7MFNFg/0.jpg" alt="JavaScript Basics">
+                <span>JavaScript Basics</span>
+            </div>
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/w7ejDZ8SWv8/0.jpg" alt="React Hooks">
+                <span>React Hooks</span>
+            </div>
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/3PHXvlpOkf4/0.jpg" alt="Node.js Intro">
+                <span>Node.js Intro</span>
+            </div>
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/pKd0Rpw7O48/0.jpg" alt="Express.js Basics">
+                <span>Express.js Basics</span>
+            </div>
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/Oe421EPjeBE/0.jpg" alt="MongoDB Intro">
+                <span>MongoDB Intro</span>
+            </div>
+            <div class="thumbnail">
+                <img src="https://img.youtube.com/vi/DPnqb74Smug/0.jpg" alt="Deploying Apps">
+                <span>Deploying Apps</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
